@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device=width, initial-scale=1">
+<title>Demba_Calculatrice</title>
+<style>
+body{
+		background-color:#CD853F;
+	}
+	
+	
+	
+	{
+		padding: center;
+		margin:center;
+		background-color:#E4E5EE;
+		text-align:left;
+		margin-top:5px;
+}
+#myform{
+	text-align:center;
+	margin:center;
+	width:330px;
+	height:580px;
+	background-color:#D3D3D3;
+	border-radius:15px;
+	font-weight: bold;
+}
+#display{
+	width:310px;
+	height:155px;
+	text-align:left;
+	font-size:33px;
+	background-color:white;
+	border-radius:15px;
+	border:0px;
+	pointer-events:none;
+	margin:3px;
+	position:relative;
+	top:5px;
+	font-family:serif;
+	max-width: 310px;
+	max-height:150px;
+	-ms-flex:b
+}
+#number{
+	width:70px;
+	height:70px;
+	margin:3px;
+	border-radius:50%;
+	position:relative;
+	top:15px;
+	border:0;
+	outline:none;
+	font-size:30px;
+	font-weight:bold;
+}
+#number:hover{
+	background-color:white;
+}
+#sign{
+	width:70px;
+	height:70px;
+	margin:3px;
+	border-radius:50%;
+    position:relative;
+    top:15px;
+	border:0;
+	background-color:black;
+	outline:none;
+	color:white;
+	font-size:30px;
+	font-weight:bold;
+}
+#sign:hover{
+	background-color:black;
+	color:white;
+}
+#clear{
+	width:70px;
+	height:70px;
+	margin:3px;
+	border-radius:50%;
+    position:relative;
+    top:15px;
+	border:0;
+	background-color:#9C903A;
+	outline:none;
+	color:white;
+	font-size:30px;
+	font-weight:bold;
+}
+#clear:hover{
+	background-color:white;
+	color:black;
+
+}
+#mycossin{
+	width:70px;
+	height:70px;
+	margin:3px;
+	border-radius:50%;
+    position:relative;
+    top:15px;
+	border:0;
+	background-color:#F92F84;
+	outline:none;
+	color:white;
+	font-size:30px;
+	font-weight:bold;
+}
+#mycossin:hover{
+	background-color:white;
+	color:black;
+}
+#myequal{
+	width:70px;
+	height:70px;
+	margin:3px;
+	border-radius:50%;
+    position:relative;
+    top:15px;
+	border:0;
+	background-color:black;
+	outline:none;
+	color:white;
+	font-size:40px;
+	font-weight:bold;
+
+}
+#myequal:hover{
+	background-color:black;
+	color:white;
+}
+
+	
+</style>
+
+<body> 
+	<form id="myform">
+		<input id="display" type="text" placeholder="0" maxlength="10" data-max-chars="10"/></br>
+		<input type="button" id="mycossin" value="COS" onclick="myCos()">
+		<input type="button" id="mycossin" value="SIN"onclick="mySin()">
+		<input type="button" id="clear" value="C" onclick="myC()">
+		<input type="button" id="clear" value="DEL" onclick="myDel()"></br>
+		<input type="button" id="number" value="1" onclick="mynumber(1)">
+		<input type="button" id="number" value="2" onclick="mynumber(2)">
+        <input type="button" id="number" value="3" onclick="mynumber(3)">
+        <input type="button" id="sign" value="+" onclick="mySign('+')">
+        <input type="button" id="number" value="4" onclick="mynumber(4)">
+        <input type="button" id="number" value="5" onclick="mynumber(5)">
+        <input type="button" id="number" value="6" onclick="mynumber(6)">
+        <input type="button" id="sign" value="-" onclick="mySign('-')">
+        <input type="button" id="number" value="7" onclick="mynumber(7)">
+        <input type="button" id="number" value="8" onclick="mynumber(8)">
+        <input type="button" id="number" value="9" onclick="mynumber(9)">
+        <input type="button" id="sign" value="*" onclick="mySign('*')">
+        <input type="button" id="number" value="0" onclick="mynumber(0)">
+        <input type="button" id="number" value="." onclick="mynumber('.')">
+        <input type="button" id="myequal" value="=" onclick="myEqual()">
+        <input type="button" id="sign" value="/" onclick="mySign('/')">
+    </form>
+     <hr/>
+     <center><h4>Demba_Calculatrice</h4></center>
+     <script>
+     	function mynumber(a){
+     		myform.display.value +=a;
+     	}
+     	function mySign(s){
+     		myform.display.value +=s;
+
+     	}
+     	function myEqual(){
+     		myform.display.value=eval(myform.display.value)
+     	}
+     	function myC(){
+     		myform.display.value="";
+     	}
+     	function myDel(){
+     		var
+     		 prevalue=myform.display.value;
+     		myform.display.value=prevalue.substr(0,prevalue. length-1);
+       }
+       function  myCos(){
+       	myform.display.value=Math.cos(myform.display.value)
+       }
+       function  mySin(){
+       	myform.display.value=Math.sin(myform.display.value)
+       }
+       
+     </script>
+ </body>
+</html>    
